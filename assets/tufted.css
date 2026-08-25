@@ -707,6 +707,16 @@ sup.footnote-ref {
 	sup.marginnote-ref {
 		display: none;
 	}
+
+	/* Keep note geometry relative to the section when nested in lists or blocks. */
+	article > section {
+		container-type: inline-size;
+	}
+
+	article > section .marginnote {
+		inline-size: 27.5cqi;
+		margin-inline-end: -33cqi;
+	}
 }
 
 /* Fix code size in margin notes (including inside links) */
